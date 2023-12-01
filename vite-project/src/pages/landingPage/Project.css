@@ -1,0 +1,13 @@
+.project {
+  padding-block-end: 2rem;
+  & > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  & .buttonContainer {
+    margin-block-start: 2rem;
+    text-align: center;
+  }
+}

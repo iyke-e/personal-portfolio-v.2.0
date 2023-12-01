@@ -1,0 +1,26 @@
+footer {
+  background-color: #1a1d1f;
+  color: var(--white);
+  padding-block: 2rem;
+
+  & ul {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  & small {
+    display: inline-block;
+    text-align: center;
+    font-size: 0.75rem;
+    width: 100%;
+  }
+}
+
+.nav-items {
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+}
+.social-icons {
+  margin-block: 2rem;
+}

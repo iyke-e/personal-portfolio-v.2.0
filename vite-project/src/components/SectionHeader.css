@@ -1,0 +1,22 @@
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .header-txt {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--darkCardBg);
+    padding: 0.75rem 1.5rem;
+  }
+
+  & .header-container {
+    height: fit-content;
+    padding-block-end: 1.5rem;
+  }
+  & .logo-icon {
+    display: grid;
+    place-content: center;
+  }
+}

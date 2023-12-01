@@ -1,0 +1,81 @@
+.hero {
+  height: 70dvh;
+
+  display: grid;
+  align-items: center;
+  @media (min-width: 570px) {
+    max-height: 30rem;
+  }
+  @media (min-width: 800px) {
+    min-height: 40rem;
+  }
+}
+
+.hero-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.hero-img {
+  display: none;
+  aspect-ratio: 1/1;
+  position: relative;
+  translate: -1rem -1rem;
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--darkCardBg);
+    z-index: -1;
+  }
+
+  &::after {
+    top: -1rem;
+    right: -1rem;
+  }
+
+  &::before {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  @media (min-width: 700px) {
+    display: initial;
+    width: 15rem;
+  }
+  @media (min-width: 800px) {
+    width: 20rem;
+  }
+  @media (min-width: 1000px) {
+    width: 24rem;
+  }
+  @media (min-width: 1200px) {
+    width: 26rem;
+  }
+}
+
+.hero-text {
+  & p {
+    margin-block: 0.5rem;
+    color: var(--orange);
+    font-size: 1.125rem;
+  }
+
+  & button {
+    margin-block-start: 4rem;
+  }
+
+  @media (min-width: 800px) {
+    & p {
+      font-size: 1.5rem;
+    }
+
+    & button {
+      margin-block-start: 3rem;
+    }
+  }
+}

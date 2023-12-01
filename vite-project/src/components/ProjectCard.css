@@ -1,0 +1,61 @@
+.projectCard {
+  background-color: var(--darkCardBg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  @media (min-width: 700px) {
+    padding: 1.5rem;
+  }
+  @media (min-width: 800px) {
+    flex-basis: 27.5%;
+    flex-grow: 1;
+  }
+
+  & > p {
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+  }
+  & h3 {
+    color: var(--orange);
+    margin-block: 1.5rem 0.75rem;
+  }
+}
+
+.projectImage {
+  width: 100%;
+  aspect-ratio: 3/2;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.25rem;
+}
+
+.projectLinks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+
+  & > * {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--miniCardBg);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      fill: var(--orange);
+      color: var(--orange);
+      background-color: var(--orange);
+    }
+  }
+}
+
+.stackUsed {
+  gap: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
