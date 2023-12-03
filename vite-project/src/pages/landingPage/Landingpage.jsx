@@ -1,7 +1,7 @@
 import About from "./About"
 import Contact from "./Contact"
 import Hero from "./Hero"
-import Project from "./project"
+import Project from "./Project"
 
 
 const Landingpage = () => {
