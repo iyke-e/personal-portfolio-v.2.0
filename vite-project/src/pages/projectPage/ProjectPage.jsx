@@ -1,4 +1,4 @@
-import Project from '../landingPage/project'
+import Project from '../landingPage/Project'
 
 const ProjectPage = () => {
     return (
