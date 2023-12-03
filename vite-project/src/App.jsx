@@ -1,5 +1,5 @@
 import Footer from "./components/Footer"
-import Header from "./components/header"
+import Header from "./components/Header"
 import ContactPage from "./pages/contactPage/ContactPage"
 import Landingpage from "./pages/landingPage/Landingpage"
 import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from "react-router-dom"
