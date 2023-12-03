@@ -1,5 +1,7 @@
 import Button from "../utils/Button"
 import "./Header.css"
+import { Link } from "react-router-dom"
+
 
 
 
@@ -33,10 +35,25 @@ const Header = () => {
 
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>contacts</li>
+                    <li>
+                        <Link to="/">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+
+                    </li>
+                    <li>
+
+                        <Link to="/project" >Projects</Link>
+
+                    </li>
+                    <li>
+
+                        <Link to="/contact" >contacts</Link>
+
+                    </li>
                     <li>
                         <Button buttonName={"Resume"} />
                     </li>

@@ -1,18 +1,23 @@
 .about,
 .project {
-  margin-block-start: 5rem;
   background-color: var(--cardBg);
   border-radius: 1rem;
   padding-inline: 1rem;
+  position: relative;
 
   & p {
     font-size: 0.875rem;
     line-height: 200%;
   }
 
+  @media (min-width: 800px) and (orientation: landscape) {
+    margin-block-start: 10rem;
+  }
+
   @media (min-width: 700px) {
     padding-inline: 2rem;
   }
+
   @media (min-width: 900px) {
     padding-inline: 3rem;
   }

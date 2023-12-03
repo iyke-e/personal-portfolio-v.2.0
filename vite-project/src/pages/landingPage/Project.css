@@ -1,4 +1,6 @@
 .project {
+  margin-block-start: 5rem;
+
   padding-block-end: 2rem;
   & > ul {
     display: flex;

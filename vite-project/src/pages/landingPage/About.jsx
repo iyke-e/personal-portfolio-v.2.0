@@ -22,7 +22,7 @@ const About = () => {
 
 
     return (
-        <section className="about">
+        <section id="about" className="about">
 
 
             <SectionHeader sectionName={"About Me"} svgImg={svgImgPath} />
@@ -93,7 +93,6 @@ const About = () => {
                                 stackImg={figma}
                                 stackName={"Figma"}
                             />
-
                         </ul>
                     </div>
                 </div>

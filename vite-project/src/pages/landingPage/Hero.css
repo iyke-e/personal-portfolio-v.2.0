@@ -1,13 +1,41 @@
 .hero {
-  height: 70dvh;
-
+  height: calc(100dvh - 4.5rem);
+  position: relative;
   display: grid;
   align-items: center;
-  @media (min-width: 570px) {
-    max-height: 30rem;
-  }
+
   @media (min-width: 800px) {
-    min-height: 40rem;
+    height: calc(100dvh - 7.75rem);
+    max-height: initial;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -5rem;
+    bottom: -15rem;
+    z-index: -1;
+    width: 20rem;
+    background-image: url(../../assets/bgik.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    display: block;
+  }
+
+  @media (min-width: 800px) and (orientation: portrait) {
+    &::before {
+      width: 28rem;
+      bottom: -20rem;
+      left: -8rem;
+    }
+  }
+  @media (min-width: 800px) and (orientation: landscape) {
+    &::before {
+      width: 28rem;
+      bottom: -30rem;
+      left: -8rem;
+    }
   }
 }
 
