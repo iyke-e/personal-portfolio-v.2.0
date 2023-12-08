@@ -23,7 +23,7 @@ const App = () => {
 
     const getData = async () => {
 
-      const response = await fetch("../public/db.json")
+      const response = await fetch("../db.json")
       const data = await response.json()
       setResult(data)
       setIsLoading(true)
