@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import Button from "../utils/Button"
 import "./Header.css"
-import { NavLink } from "react-router-dom"
+// import { NavLink } from "react-router-dom"
 
 
 
@@ -56,26 +56,26 @@ const Header = () => {
             <nav ref={navId} className="navigation">
                 <ul>
                     <li >
-                        <NavLink onClick={closeMenu} to="/">
+                        <a onClick={closeMenu} href="#hero">
                             Home
-                        </NavLink>
-                    </li>
-                    <li >
-                        <NavLink onClick={closeMenu} to="/about">
-                            About
-                        </NavLink>
-
+                        </a>
 
                     </li>
                     <li >
+                        <a onClick={closeMenu} href="#about">About</a>
 
-                        <NavLink onClick={closeMenu} to="/project" >Projects</NavLink>
 
                     </li>
                     <li >
 
+                        <a onClick={closeMenu} href="#project">Projects</a>
 
-                        <NavLink onClick={closeMenu} to="/contact" >contact</NavLink>
+                    </li>
+                    <li >
+
+
+
+                        <a onClick={closeMenu} href="#contact">contact</a>
 
                     </li>
                     <li onClick={closeMenu}>

@@ -93,3 +93,12 @@
     font-size: 0.75rem;
   }
 }
+
+.HomeArrow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  & svg {
+    rotate: 180deg;
+  }
+}

@@ -1,3 +1,5 @@
+import Footer from "../../components/Footer"
+import Header from "../../components/Header"
 import About from "./About"
 import Contact from "./Contact"
 import Hero from "./Hero"
@@ -8,12 +10,14 @@ const Landingpage = (data) => {
     window.scrollTo(0, 0)
 
     return (
-        <main>
+        <>
+            <Header />
             <Hero />
             <About />
             <Project data={data} />
             <Contact />
-        </main>
+            <Footer />
+        </>
     )
 }
 

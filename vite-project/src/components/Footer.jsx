@@ -1,5 +1,4 @@
 import "./Footer.css"
-import { NavLink } from "react-router-dom"
 
 const Footer = () => {
 
@@ -8,23 +7,17 @@ const Footer = () => {
         <footer>
             <ul className="nav-items">
                 <li>
-                    <NavLink to="/">
-                        Home
-                    </NavLink>
+                    <a href="#hero">Home</a>
                 </li>
                 <li>
-                    <NavLink to="/about">About</NavLink>
-
+                    <a href="#about">About</a>
                 </li>
                 <li>
-
-                    <NavLink to="/project" >Projects</NavLink>
+                    <a href="#project">Projects</a>
 
                 </li>
                 <li>
-
-                    <NavLink to="/contact" >contact</NavLink>
-
+                    <a href="#contact">Contact</a>
                 </li>
 
             </ul>

@@ -6,7 +6,7 @@
   justify-content: space-between;
   background-color: var(--footerBg);
   padding-block: 3rem;
-  margin-block-start: 5rem;
+  margin-block-start: 2rem;
   position: relative;
   isolation: isolate;
 }
@@ -15,8 +15,77 @@
   width: 100%;
 
   & h2 {
-    margin-block-end: 3rem;
+    margin-block-end: 2rem;
+    padding-block-start: 3rem;
   }
+}
+
+#contact-form {
+  margin-block-end: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(58, 56, 56, 0.1);
+  @media (max-width: 570px) {
+    background-color: var(--miniCardBg);
+  }
+  & > div {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  & label {
+    font-size: 0.75rem;
+  }
+  & input,
+  textarea {
+    background-color: transparent;
+    border: 2px solid white;
+    outline: none;
+    padding: 0.875rem;
+    border-radius: 0.5rem;
+    color: var(--white);
+    &:focus,
+    &:hover {
+      border-color: var(--orange);
+    }
+  }
+
+  & button {
+    width: fit-content;
+    justify-self: end;
+    margin-inline: 1rem;
+  }
+}
+
+.form-sec {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  isolation: isolate;
+}
+
+.contact-img {
+  width: 100%;
+  opacity: 0.2;
+
+  @media (max-width: 570px) {
+    position: absolute;
+    scale: 70%;
+    top: 35%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0.2;
+    z-index: -1;
+  }
+}
+
+.contactField {
+  width: 100%;
 }
 
 .contact-me {
