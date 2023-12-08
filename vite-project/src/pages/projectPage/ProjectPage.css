@@ -1,0 +1,95 @@
+.projectPage {
+  & h2 {
+    font-weight: 300;
+    margin-block: 2rem 4rem;
+    text-transform: uppercase;
+    @media (max-width: 800px) {
+      margin-block: 2rem;
+    }
+  }
+
+  & .projectPageContent {
+    margin-block: 5rem;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 800px) {
+      margin-block: 0 3rem;
+    }
+
+    & > ul {
+      display: flex;
+      gap: 2rem;
+      align-items: start;
+      &:nth-of-type(1) h3 {
+        font-weight: 700;
+      }
+
+      &:nth-of-type(1) {
+        & li {
+          padding-block: 0.5rem;
+        }
+      }
+
+      &:not(:nth-of-type(1)) {
+        border-bottom: 1px solid rgba(253, 97, 6, 0.144);
+      }
+
+      & > li {
+        width: 100%;
+        padding-block: 1.5rem;
+
+        & a {
+          transition: 0.5s;
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          & path {
+            transition: 0.5s;
+          }
+
+          &:hover,
+          &:focus {
+            color: var(--orange);
+            & path {
+              fill: var(--orange);
+            }
+          }
+        }
+
+        &:nth-of-type(1) {
+          width: 20%;
+        }
+        &:nth-of-type(2) {
+          width: 80%;
+        }
+
+        &:nth-of-type(3) {
+          @media (max-width: 800px) {
+            display: none;
+          }
+        }
+        &:nth-of-type(4) {
+          width: 40%;
+          @media (max-width: 1200px) {
+            display: none;
+          }
+        }
+        &:nth-of-type(5) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.builtwithlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  & p {
+    background-color: var(--darkCardBg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.75rem;
+  }
+}

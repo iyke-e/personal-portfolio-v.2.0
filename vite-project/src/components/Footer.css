@@ -7,6 +7,16 @@ footer {
     display: flex;
     gap: 1rem;
     align-items: center;
+    & li {
+      cursor: pointer;
+      & a {
+        transition: 0.2s ease-in-out;
+        &:hover,
+        &.active {
+          color: var(--orange);
+        }
+      }
+    }
   }
 
   & small {
@@ -14,6 +24,9 @@ footer {
     text-align: center;
     font-size: 0.75rem;
     width: 100%;
+    & span {
+      color: var(--orange);
+    }
   }
 }
 
@@ -23,4 +36,15 @@ footer {
 }
 .social-icons {
   margin-block: 2rem;
+
+  & a {
+    & svg path {
+      transition: 0.25s ease-in-out;
+    }
+    &:hover {
+      & svg path {
+        fill: var(--orange);
+      }
+    }
+  }
 }

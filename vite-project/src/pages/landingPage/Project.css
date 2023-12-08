@@ -3,9 +3,16 @@
 
   padding-block-end: 2rem;
   & > ul {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: 1.5rem;
+    grid-template-columns: auto;
+    align-items: end;
+    @media (min-width: 600px) {
+      grid-template-columns: auto auto;
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: auto auto auto;
+    }
   }
 
   & .buttonContainer {

@@ -16,6 +16,9 @@
   --cardBg: #212629;
   --miniCardBg: rgba(242, 243, 243, 0.05);
   --footerBg: #1a1d1f;
+  --paddingMobile: 1rem;
+  --paddingTab: 3rem;
+  --paddingDesktop: 8rem;
 }
 
 ul,
@@ -32,19 +35,48 @@ body {
   background: var(--DarkBg);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+}
+html {
+  scroll-behavior: smooth;
+}
+#root {
+  display: grid;
+  min-height: 100svh;
+  grid-template-rows: auto 1fr auto;
   max-width: 100vw;
+}
+main {
+  height: 100%;
+  position: relative;
   overflow-x: hidden;
-  background-image: url(./assets/bgik.svg);
-  background-repeat: no-repeat;
-  background-position: top 5rem right -12rem;
-  background-size: 20rem;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20rem;
+    aspect-ratio: 1/1;
+    position: absolute;
+    background-image: url(./assets/bgik.svg);
+    background-size: contain;
+    top: -8rem;
+    right: -12rem;
+    opacity: 0.3;
+  }
 
-  @media (min-width: 800px) {
-    background-position: top 4rem right -16rem;
-    background-size: 28rem;
+  @media (min-width: 600px) {
+    &::before {
+      width: 35rem;
+      top: -10rem;
+      right: -20rem;
+    }
   }
 }
+footer {
+  align-self: end;
+}
 
+header {
+  align-self: start;
+}
 img,
 svg {
   display: block;
@@ -96,35 +128,40 @@ h3 {
   font-weight: 400;
   font-size: 1rem;
 }
+
+p,
+a,
+li {
+  font-size: 0.875rem;
+  @media (max-width: 800px) {
+    font-size: 0.875rem;
+  }
+}
 header,
 .hero,
+.projectPage,
+.aboutPage,
+.contactPage,
 .contact,
 footer {
-  padding-inline: 1rem;
+  padding-inline: var(--paddingMobile);
 
   @media (min-width: 600px) {
-    padding-inline: 3rem;
+    padding-inline: var(--paddingTab);
   }
   @media (min-width: 1200px) {
-    padding-inline: 5rem;
+    padding-inline: var(--paddingDesktop);
   }
 }
 
 .project,
 .about {
-  margin-inline: 1rem;
+  margin-inline: var(--paddingMobile);
 
   @media (min-width: 600px) {
-    margin-inline: 3rem;
+    margin-inline: var(--paddingTab);
   }
   @media (min-width: 1200px) {
-    margin-inline: 5rem;
-  }
-}
-
-header {
-  padding-block: 1rem;
-  @media (min-width: 600px) {
-    padding-block: 2rem;
+    margin-inline: var(--paddingDesktop);
   }
 }

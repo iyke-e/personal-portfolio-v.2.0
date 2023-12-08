@@ -1,4 +1,142 @@
-{
-    "project-image": "https//",
-    "Project-name": ""
-}
+[
+    {
+        "featured": "true",
+        "year": "2022",
+        "month": "March",
+        "project": "Rest Country API",
+        "builtWith": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "JSON API"
+        ],
+        "liveUrl": "https://iykedev-rest-country-api.netlify.app/",
+        "sourceUrl": "https://github.com/iyke-e/Rest-country-api",
+        "imageUrl": "https://ucarecdn.com/9c8da5e5-5c5c-401b-a922-9271b1f1bc40/restcountryapi.png",
+        "description": "The webiste fectches real time information through API's, offering up to date details about countries, including demographics , geography and more. it features interactive user interface, rich country profiles, respnsive design and educational elements"
+    },
+    {
+        "featured": "true",
+        "year": "2022",
+        "month": "July",
+        "project": "Room Homepage",
+        "builtWith": [
+            "HTML",
+            "SCSS",
+            "JavaScript"
+        ],
+        "liveUrl": "https://room-homepage-iyke.pages.dev/",
+        "sourceUrl": "https://github.com/iyke-e/room-homepage",
+        "imageUrl": "https://ucarecdn.com/a3d56a86-4e62-4120-9b12-29f3ee4d1367/roomhomepage.png",
+        "description": "A Room Homepage website created using vanilla Js, it features a slider and responsive layout,"
+    },
+    {
+        "featured": "false",
+        "year": "2022",
+        "month": "August",
+        "project": "Chat App CSS Illustration",
+        "builtWith": [
+            "HTML",
+            "SCSS"
+        ],
+        "liveUrl": "https://iyke-e.github.io/chat-app-css/",
+        "sourceUrl": "https://github.com/iyke-e/chat-app-css",
+        "imageUrl": "https://ucarecdn.com/7357aeb4-3644-4835-9c25-7a3140ccc43b/chatapp.png",
+        "description": "A chatApp Illustration Website created using just HTML and CSS, everything on the site is created using CSS from scratch"
+    },
+    {
+        "featured": "false",
+        "year": "2022",
+        "month": "September",
+        "project": "Social Media Dashboard",
+        "builtWith": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "liveUrl": "https://iyke-e.github.io/social-media-dashboard/",
+        "sourceUrl": "https://github.com/iyke-e/social-media-dashboard",
+        "imageUrl": "https://ucarecdn.com/e6ff052e-e17f-4e2f-8be1-fe4bc0c947ab/Socialmediadashboard.png",
+        "description": "A simple Social Media Dashboard Landing pageWith dark and light mode theme toggle"
+    },
+    {
+        "featured": "true",
+        "year": "2023",
+        "month": "March",
+        "project": "Space Tourism Website",
+        "builtWith": [
+            "React js",
+            "SCSS",
+            "vite"
+        ],
+        "liveUrl": "https://iykedev-space-website.netlify.app/",
+        "sourceUrl": "https://github.com/iyke-e/space-tourism-website",
+        "imageUrl": "https://ucarecdn.com/94a2388c-2a4a-4c2a-9d8c-68ea5d95f62a/spacetourismwebsite.png",
+        "description": "Complete website created using react and scss, it provides information about space in a user friendly manner some key features are resposive design, visual appeal, informative content and many more"
+    },
+    {
+        "featured": "true",
+        "year": "2023",
+        "month": "November",
+        "project": "Url shortening API landing page",
+        "builtWith": [
+            "HTML",
+            "SCSS",
+            "JavaScript",
+            "cleanuri API"
+        ],
+        "liveUrl": "https://iyke-e.github.io/url-shortening-api",
+        "sourceUrl": "https://github.com/iyke-e/url-shortening-api",
+        "imageUrl": "https://ucarecdn.com/2f7868fb-e333-4be6-a52b-73f8c274eaa4/urlshortening.png",
+        "description": "Web app for shortening any valid URL, created using Clean URI API. it features Clean URI API integration, Browser Storage Utilization, User friendly landing page, Error validation, cross browser compatibility as well as responsive layout"
+    },
+    {
+        "featured": "true",
+        "year": "2023",
+        "month": "November",
+        "project": "IP address tracker",
+        "builtWith": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Leaflet Js",
+            "Ipstack API"
+        ],
+        "liveUrl": "https://iyke-e.github.io/ip-address-tracker-master/",
+        "sourceUrl": "https://github.com/iyke-e/ip-address-tracker-master",
+        "imageUrl": "https://ucarecdn.com/b5503303-c2a4-409b-be55-3eac9f0d8de4/ipaddresstracker.png",
+        "description": "IP tracking app for displaying information about current location of IP address. it features dual API integration and user friendly interface"
+    },
+    {
+        "featured": "true",
+        "year": "2023",
+        "month": "November",
+        "project": "Shorpify merchant onboarding dashboard",
+        "builtWith": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "liveUrl": "https://shopify-merchant-onboarding-dashboard.pages.dev/",
+        "sourceUrl": "https://github.com/iyke-e/Shopify-merchant-onboarding-dashboard",
+        "imageUrl": "https://ucarecdn.com/fed4b343-e03e-4680-b8fb-c7dfb70f1359/shorpifymerchantonboardingpage.png",
+        "description": "Solution to Hackathon challenge, recreated the provided figma design. tthehis project features responsive layout as well as accessibilty to all kind of users from mouse users to keyboard users as well as screen reader users"
+    },
+    {
+        "featured": "false",
+        "year": "2023",
+        "month": "December",
+        "project": "Personal Portfolio v2.0",
+        "builtWith": [
+            "React",
+            "CSS",
+            "Mongodb",
+            "Express Js",
+            "Node Js"
+        ],
+        "liveUrl": "https://personal-portfolio-v-2-0.pages.dev/",
+        "sourceUrl": "https://github.com/iyke-e/personal-portfolio-v.2.0",
+        "imageUrl": "https://ucarecdn.com/fe937da7-2b4b-464a-be23-aef8ae6ca059/personalportfoliov20.png",
+        "description": "Portfolio website builtWith react, and custom REST API created by me. it features responsive design layout, seamless interactionWith mongodb database and many other features"
+    }
+]

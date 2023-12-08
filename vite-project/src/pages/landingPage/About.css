@@ -11,7 +11,7 @@
   }
 
   @media (min-width: 800px) and (orientation: landscape) {
-    margin-block-start: 10rem;
+    margin-block-start: 5rem;
   }
 
   @media (min-width: 700px) {
@@ -19,16 +19,21 @@
   }
 
   @media (min-width: 900px) {
-    padding-inline: 3rem;
+    padding-inline: 2.5rem;
   }
 }
 
+.about {
+  @media (min-width: 700px) {
+    padding-inline: 6rem;
+  }
+}
 .about-txt {
   background-color: var(--darkCardBg);
   padding: 1rem 0.75rem;
   border-radius: 10px 10px 0 0;
   @media (min-width: 700px) {
-    padding: 1.5rem;
+    padding: 4rem 5rem;
   }
 }
 
@@ -37,9 +42,6 @@
   display: grid;
   place-items: center;
   gap: 2rem;
-  @media (min-width: 700px) {
-    margin-block-start: 4rem;
-  }
 }
 
 .tech-stack-header {

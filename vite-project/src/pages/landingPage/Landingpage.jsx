@@ -4,12 +4,14 @@ import Hero from "./Hero"
 import Project from "./Project"
 
 
-const Landingpage = () => {
+const Landingpage = (data) => {
+    window.scrollTo(0, 0)
+
     return (
         <main>
             <Hero />
             <About />
-            <Project />
+            <Project data={data} />
             <Contact />
         </main>
     )

@@ -1,37 +1,90 @@
 header {
+  padding-block: 1rem;
+}
+
+header {
   display: flex;
   justify-content: space-between;
   color: var(--white);
   align-items: center;
-  & svg {
-    width: 40px;
-    height: 40px;
-  }
-  @media (min-width: 800px) {
+  position: relative;
+  max-width: 100vw;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--DarkBg),
+    rgba(31, 33, 36, 0.9),
+    rgba(0, 0, 0, 0)
+  );
+
+  @media (max-width: 800px) {
     & svg {
-      width: 60px;
-      height: 60px;
+      height: 35px;
     }
   }
 }
 
+.show {
+  display: grid;
+}
+
+.lockScroll {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
 nav {
   display: none;
+  width: 100vw;
+  height: 100svh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+  top: 0;
+  left: 0;
 
   @media (min-width: 800px) {
     display: initial;
+    position: relative;
+    width: initial;
+    height: initial;
+    background-color: initial;
   }
-
   & ul {
-    display: flex;
-    align-items: center;
+    display: grid;
+    margin: 6rem 2rem;
     gap: 2rem;
+    align-content: start;
 
+    @media (min-width: 800px) {
+      display: flex;
+      margin: initial;
+      align-items: center;
+    }
     & li {
-      cursor: pointer;
-      transition: 0.2s ease-in-out;
-      &:hover {
-        color: var(--orange);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-block: 1rem;
+
+      & a {
+        transition: 0.25s;
+        &:hover,
+        &.active {
+          color: var(--orange);
+        }
+      }
+      @media (min-width: 800px) {
+        border-bottom: none;
+      }
+
+      @media (max-width: 800px) {
+        &:nth-last-of-type(1) {
+          & button {
+            border: none;
+            padding: initial;
+          }
+        }
       }
     }
   }
@@ -40,6 +93,8 @@ nav {
 .menu {
   display: grid;
   place-content: center;
+  position: relative;
+  z-index: 2;
   & svg {
     height: 15px;
   }
