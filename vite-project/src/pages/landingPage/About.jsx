@@ -13,9 +13,26 @@ import vuejs from "../../assets/vuejs.svg"
 import "./About.css"
 import SectionHeader from "../../components/SectionHeader"
 import TechMiniCard from "../../utils/TechMiniCard"
+import { useRef } from "react"
 
 
 const About = () => {
+
+    const listRef = useRef(null)
+
+    let listRefArray;
+
+    if (listRef.current) {
+        listRefArray = [...listRef.current.children]
+        listRefArray.forEach(item => {
+            const duplicateArray = item.cloneNode("true")
+            duplicateArray.setAttribute("aria-hidden", true)
+            listRef.current.appendChild(duplicateArray);
+        })
+    } else {
+        console.log("null value")
+    }
+
 
 
     const svgImgPath = <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,54 +64,80 @@ const About = () => {
                         <h2>My Tech Stack</h2>
                     </div>
                     <div className="the-stacks">
-                        <ul>
+                        <ul ref={listRef}>
+                            <li>
+                                <TechMiniCard
+                                    stackImg={html}
+                                    stackName={"HTML"}
+                                />
+                            </li>
+                            <li>
+                                <TechMiniCard
+                                    stackImg={css}
+                                    stackName={"CSS"}
+                                />
+                            </li>
+                            <li>
+                                <TechMiniCard
+                                    stackImg={javascript}
+                                    stackName={"JavaScript"}
+                                />
+                            </li>
 
-                            <TechMiniCard
-                                stackImg={html}
-                                stackName={"HTML"}
-                            />
+                            <li>
+                                <TechMiniCard
+                                    stackImg={react}
+                                    stackName={"React"}
+                                />
+                            </li>
+                            <li>
+                                <TechMiniCard
+                                    stackImg={tailwindcss}
+                                    stackName={"TailwindCSS"}
+                                />
+                            </li>
 
-                            <TechMiniCard
-                                stackImg={css}
-                                stackName={"CSS"}
-                            />
 
-                            <TechMiniCard
-                                stackImg={javascript}
-                                stackName={"JavaScript"}
-                            />
-                            <TechMiniCard
-                                stackImg={react}
-                                stackName={"React"}
-                            />
-                            <TechMiniCard
-                                stackImg={tailwindcss}
-                                stackName={"TailwindCSS"}
-                            />
-                            <TechMiniCard
-                                stackImg={sass}
-                                stackName={"SASS/SCSS"}
-                            />
-                            <TechMiniCard
-                                stackImg={vuejs}
-                                stackName={"Vue"}
-                            />
-                            <TechMiniCard
-                                stackImg={git}
-                                stackName={"git"}
-                            />
-                            <TechMiniCard
-                                stackImg={github}
-                                stackName={"Github"}
-                            />
-                            <TechMiniCard
-                                stackImg={mongodb}
-                                stackName={"MongoDB"}
-                            />
-                            <TechMiniCard
-                                stackImg={figma}
-                                stackName={"Figma"}
-                            />
+                            <li>
+                                <TechMiniCard
+                                    stackImg={sass}
+                                    stackName={"SASS/SCSS"}
+                                />
+                            </li>
+                            <li>
+                                <TechMiniCard
+                                    stackImg={vuejs}
+                                    stackName={"Vue"}
+                                />
+                            </li>
+                            <li>
+                                <TechMiniCard
+                                    stackImg={git}
+                                    stackName={"git"}
+                                />
+                            </li>
+                            <li>
+                                <TechMiniCard
+                                    stackImg={github}
+                                    stackName={"Github"}
+                                />
+                            </li>
+                            <li>
+                                <TechMiniCard
+                                    stackImg={mongodb}
+                                    stackName={"MongoDB"}
+                                />
+                            </li>
+                            <li>
+                                <TechMiniCard
+                                    stackImg={figma}
+                                    stackName={"Figma"}
+                                />
+                            </li>
+
+
+
+
                         </ul>
                     </div>
                 </div>

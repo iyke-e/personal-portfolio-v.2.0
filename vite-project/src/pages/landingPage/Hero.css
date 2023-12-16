@@ -3,91 +3,182 @@
   position: relative;
   display: grid;
   align-items: center;
-
+  overflow: hidden;
+  min-height: 20rem;
   @media (min-width: 800px) {
     height: calc(100dvh - 7.75rem);
     max-height: initial;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    opacity: 0.2;
-    left: -5rem;
-    bottom: -15rem;
-    z-index: -1;
-    width: 20rem;
-    background-image: url(../../assets/bgik.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    aspect-ratio: 1/1;
-    display: block;
-  }
-
-  @media (min-width: 800px) and (orientation: portrait) {
-    &::before {
-      width: 28rem;
-      bottom: -20rem;
-      left: -8rem;
-    }
-  }
-  @media (min-width: 800px) and (orientation: landscape) {
-    &::before {
-      width: 28rem;
-      bottom: -30rem;
-      left: -8rem;
-    }
+  @media (orientation: portrait) {
+    max-height: 45rem;
   }
 }
 
 .hero-content-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.hero-img {
-  display: none;
-  aspect-ratio: 1/1;
+.hero-animation-container {
+  --translate: 11rem;
+  --animation-time: 60s;
+  --center-image: 8rem;
+  --outer-box: 5rem;
+  --outer-box-img: 2rem;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  @media (max-width: 1000px) {
+    --translate: 9rem;
+    --center-image: 7rem;
+    --outer-box: 4rem;
+    --outer-box-img: 1.6rem;
+  }
+
+  @media (max-height: 500px) and (orientation: landscape) {
+    --translate: 6rem;
+    --center-image: 4.5rem;
+    --outer-box: 2.5rem;
+    --outer-box-img: 1.2rem;
+  }
+
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 50vh;
+  display: grid;
+  place-content: center;
   position: relative;
-  translate: -1rem -1rem;
-  &::before,
-  &::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
+  & > img {
+    width: var(--center-image);
+    aspect-ratio: 1;
+    border-radius: 20%;
+    border: 4px solid var(--white);
+  }
+
+  & ul {
+    @media (prefers-reduced-motion) {
+      animation-play-state: paused;
+
+      & li {
+        animation-play-state: paused !important;
+      }
+    }
     position: absolute;
-    background-color: var(--darkCardBg);
-    z-index: -1;
-  }
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    animation: spin var(--animation-time) linear infinite;
+    cursor: pointer;
 
-  &::after {
-    top: -1rem;
-    right: -1rem;
-  }
+    &:hover,
+    &:hover li {
+      animation-play-state: paused;
+    }
+    & li {
+      position: inherit;
+      display: grid;
+      place-content: center;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: var(--outer-box);
+      aspect-ratio: 1;
+      border-radius: 20px;
+      border: 2px solid var(--white);
+      animation: maintain-position var(--animation-time) linear infinite;
 
-  &::before {
-    top: 1rem;
-    right: 1rem;
-  }
+      &:hover {
+        border: transparent;
+        &::before {
+          opacity: 100%;
+        }
+      }
 
-  @media (min-width: 700px) {
-    display: initial;
-    width: 15rem;
-  }
-  @media (min-width: 800px) {
-    width: 20rem;
-  }
-  @media (min-width: 1000px) {
-    width: 24rem;
-  }
-  @media (min-width: 1200px) {
-    width: 26rem;
+      &::before {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(244, 148, 52, 0.8);
+        position: absolute;
+        border-radius: 15px;
+        display: grid;
+        place-content: center;
+        color: var(--white);
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+
+      & img {
+        height: var(--outer-box-img);
+      }
+
+      &:nth-last-of-type(1) {
+        --deg: -0deg;
+        rotate: 0deg;
+
+        &::before {
+          content: "Vue Js";
+        }
+      }
+      &:nth-last-of-type(2) {
+        --deg: -45deg;
+        rotate: 45deg;
+        &::before {
+          content: "Figma";
+        }
+      }
+      &:nth-last-of-type(3) {
+        --deg: -90deg;
+        rotate: 90deg;
+        &::before {
+          content: "SASS";
+        }
+      }
+      &:nth-last-of-type(4) {
+        --deg: -135deg;
+        rotate: 135deg;
+        &::before {
+          content: "Tailwind";
+        }
+      }
+      &:nth-last-of-type(5) {
+        --deg: -180deg;
+        rotate: 180deg;
+        &::before {
+          content: "React";
+        }
+      }
+      &:nth-last-of-type(6) {
+        --deg: -225deg;
+        rotate: 225deg;
+        &::before {
+          content: "JS";
+        }
+      }
+      &:nth-last-of-type(7) {
+        --deg: -270deg;
+        rotate: 270deg;
+        &::before {
+          content: "CSS";
+        }
+      }
+      &:nth-last-of-type(8) {
+        --deg: -315deg;
+        rotate: 315deg;
+        &::before {
+          content: "HTML";
+        }
+      }
+    }
   }
 }
 
 .hero-text {
+  width: 100%;
+
   & p {
     margin-block: 0.5rem;
     color: var(--orange);
@@ -106,5 +197,30 @@
     & button {
       margin-block-start: 3rem;
     }
+  }
+
+  @media (max-height: 500px) and (orientation: landscape) {
+    & p {
+      font-size: 1rem;
+    }
+
+    & button {
+      margin-block-start: 1rem;
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    rotate: 1turn;
+  }
+}
+
+@keyframes maintain-position {
+  from {
+    transform: translate(var(--translate)) rotate(var(--deg));
+  }
+  to {
+    transform: translate(var(--translate)) rotate(calc(-1turn + var(--deg)));
   }
 }

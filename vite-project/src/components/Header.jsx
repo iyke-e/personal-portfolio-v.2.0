@@ -79,7 +79,10 @@ const Header = () => {
 
                     </li>
                     <li onClick={closeMenu}>
-                        <Button buttonName={"Resume"} />
+                        <a href="">
+                            <Button buttonName={"Resume"} />
+
+                        </a>
                     </li>
                 </ul>
             </nav>

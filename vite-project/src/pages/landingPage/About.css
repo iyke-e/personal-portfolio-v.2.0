@@ -23,17 +23,13 @@
   }
 }
 
-.about {
-  @media (min-width: 700px) {
-    padding-inline: 6rem;
-  }
-}
 .about-txt {
   background-color: var(--darkCardBg);
   padding: 1rem 0.75rem;
   border-radius: 10px 10px 0 0;
   @media (min-width: 700px) {
-    padding: 4rem 5rem;
+    padding: 2rem;
+    text-align: justify;
   }
 }
 
@@ -41,7 +37,7 @@
   margin-block-start: 3rem;
   display: grid;
   place-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .tech-stack-header {
@@ -58,15 +54,35 @@
 }
 
 .the-stacks {
-  & ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
 
-    @media (min-width: 700px) {
-      gap: 1rem;
+  & > ul {
+    @media (prefers-reduced-motion) {
+      flex-wrap: wrap;
+      animation: none;
+      width: 100%;
+      justify-content: center;
+      & li[aria-hidden] {
+        display: none;
+      }
     }
+
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    gap: 1rem;
+    animation: slide 90s linear infinite;
+    @media (max-width: 600px) {
+      gap: 0.5rem;
+    }
+  }
+}
+
+@keyframes slide {
+  to {
+    translate: calc(-50% - 0.5rem);
   }
 }

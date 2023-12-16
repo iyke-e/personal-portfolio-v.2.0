@@ -3,10 +3,20 @@ import PropTypes from 'prop-types'
 import "./TechMiniCard.css"
 const TechMiniCard = ({ stackImg, stackName }) => {
     return (
-        <li className='stackItem'>
-            <img src={stackImg} alt="" />
+        <div className='stackItem'>
+            <div className='stackImg'
+                style={{
+                    backgroundImage: `url(${stackImg})`
+                }}>
+
+            </div>
+
+
             <p>{stackName}</p>
-        </li>
+
+
+
+        </div>
     )
 }
 
