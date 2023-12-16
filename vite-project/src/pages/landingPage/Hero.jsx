@@ -47,7 +47,6 @@ const Hero = () => {
                         </li>
                         <li>
                             <img src={tailwindcss} alt="" />
-
                         </li>
                         <li>
                             <img src={sass} alt="" />
