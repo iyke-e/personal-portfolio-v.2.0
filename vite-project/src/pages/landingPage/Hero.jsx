@@ -1,4 +1,4 @@
-import Programmer from "../../assets/programmer.png"
+import programmer from "../../assets/programmer.png"
 import Button from "../../utils/Button"
 import "./Hero.css"
 import html from "../../assets/html.svg"
@@ -28,7 +28,7 @@ const Hero = () => {
                 </div>
 
                 <div className="hero-animation-container">
-                    <img src={Programmer} alt="programmer img" />
+                    <img src={programmer} alt="programmer img" />
                     <ul>
                         <li>
                             <img src={html} alt="" />

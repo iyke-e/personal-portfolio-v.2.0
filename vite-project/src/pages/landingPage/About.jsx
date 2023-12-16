@@ -10,10 +10,10 @@ import mongodb from "../../assets/mongodb.svg"
 import git from "../../assets/git.svg"
 import github from "../../assets/github.svg"
 import vuejs from "../../assets/vuejs.svg"
-import "./About.css"
 import SectionHeader from "../../components/SectionHeader"
 import TechMiniCard from "../../utils/TechMiniCard"
 import { useRef } from "react"
+import "./About.css"
 
 
 const About = () => {
@@ -134,10 +134,6 @@ const About = () => {
                                     stackName={"Figma"}
                                 />
                             </li>
-
-
-
-
                         </ul>
                     </div>
                 </div>
