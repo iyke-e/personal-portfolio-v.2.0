@@ -1,14 +1,14 @@
-import programmer from "../../assets/programmer.png"
+import programmer from "/assets/programmer.png"
 import Button from "../../utils/Button"
 import "./Hero.css"
-import html from "../../assets/html.svg"
-import css from "../../assets/css.svg"
-import react from "../../assets/react.svg"
-import javascript from "../../assets/javascript.svg"
-import tailwindcss from "../../assets/tailwindcss.svg"
-import figma from "../../assets/figma.svg"
-import sass from "../../assets/sass.svg"
-import vuejs from "../../assets/vuejs.svg"
+import html from "/assets/html.svg?url"
+import css from "/assets/css.svg?url"
+import react from "/assets/react.svg?url"
+import javascript from "/assets/javascript.svg?url"
+import tailwindcss from "/assets/tailwindcss.svg?url"
+import figma from "/assets/figma.svg?url"
+import sass from "/assets/sass.svg?url"
+import vuejs from "/assets/vuejs.svg?url"
 
 
 const Hero = () => {
