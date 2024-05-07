@@ -1,0 +1,35 @@
+.resume {
+  background-color: gray;
+  margin-inline: var(--paddingDesktop);
+  padding: 4rem;
+}
+
+.section1 {
+  display: flex;
+  gap: 2rem;
+}
+
+.profilePics img {
+  width: 12rem;
+  height: 15rem;
+}
+.preData {
+  small {
+    color: var(--orange);
+    padding-bottom: 5rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  ul {
+    display: grid;
+    gap: 1rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}

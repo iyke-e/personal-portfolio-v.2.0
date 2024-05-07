@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import Button from "../utils/Button"
 import "./Header.css"
-// import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 
@@ -79,10 +79,10 @@ const Header = () => {
 
                     </li>
                     <li onClick={closeMenu}>
-                        <a href="">
+                        <Link to="/resume">
                             <Button buttonName={"Resume"} />
+                        </Link>
 
-                        </a>
                     </li>
                 </ul>
             </nav>

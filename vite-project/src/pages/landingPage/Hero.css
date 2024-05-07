@@ -60,13 +60,14 @@
   }
 
   & ul {
-    @media (prefers-reduced-motion) {
+    /* @media (prefers-reduced-motion) {
       animation-play-state: paused;
 
       & li {
         animation-play-state: paused !important;
       }
-    }
+    } */
+
     position: absolute;
     top: 50%;
     left: 50%;

@@ -1,6 +1,7 @@
 import Landingpage from "./pages/landingPage/Landingpage"
 import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from "react-router-dom"
 import ProjectPage from "./pages/projectPage/ProjectPage"
+import Resume from "./pages/resume/resume"
 import { useEffect, useState } from "react"
 
 
@@ -40,6 +41,7 @@ const App = () => {
           }
 
         />} />
+        <Route path="/resume" element={<Resume />} />
       </Route>
     )
   )
